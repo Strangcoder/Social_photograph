@@ -1,0 +1,1557 @@
+@font-face {
+    font-family: 'URW Bookman L Bold'; /* Имя, которое вы будете использовать для шрифта */
+    src: url('fonts/URW Bookman L Bold.ttf') format('truetype'); /* Укажите путь к файлу шрифта */
+    font-weight: bold; /* Установите вес для шрифта */
+    font-style: normal; /* Установите стиль для шрифта */
+}
+@keyframes ani_txt{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+@keyframes ani_cart{
+	from{
+		transform: translate(0%,0%);
+	}
+	to{
+		transform: translate(0%,0%) scale(1.5);
+	}
+}
+@keyframes gradient_ani{
+	from{
+		background-position: 0% 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	to{
+		background-position: 0% 50%;
+	}
+}
+.parent{
+	width: 100%;
+	height: 100%;
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.head{
+	width: 100%;
+	height: 50px;
+	display: grid;
+	grid-template-rows: 100%;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	justify-items: center;
+	align-items: center;
+	gap:10px;
+}
+.txt{
+	font-family: 'URW Bookman L Bold';
+}
+.header{
+	width: 100%;
+	height: 100px;
+	border: 0px solid;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+}
+.viewprofile{
+	width: 100%;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	border: 0px solid;
+	gap: 5px;
+}
+a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: inherit; /* Устанавливаем цвет текста ссылки таким же, как у родительского элемента */
+    cursor: default; /* Убираем указатель курсора при наведении */
+}
+.boximg{
+	width: 35px;
+	height: 35px;
+	border: 0px solid;
+	border-radius: 100px;
+}
+.img{
+	width: 100%;
+	height: 100%;
+	border-radius: 100px;
+}
+.buttons{
+	width: 50%;
+	height: 40px;
+	border: 0px solid;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+}
+
+.main{
+	width: 90%;
+	height: 100%;
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.footer{
+	width: 100%;
+	height: 200px;
+	border-top: 2px solid;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+.txtFNumb{
+	font-size: 15px; 
+	font-family: 'URW Bookman L Bold', serif;
+}
+.txtFLinks{
+	font-size: 18px;
+	font-family: 'URW Bookman L Bold', serif;
+}
+.titleF{
+	font-size: 30px;
+	font-family: 'URW Bookman L Bold', serif;
+}
+
+
+
+body {
+	background: linear-gradient(to bottom right, #517599, #f2d7c2);
+	animation: gradient_ani 5s ease infinite;
+/*	transition: filter 1s;*/
+}
+
+
+.cart.blur {
+    filter: blur(5px); /* Размытие для других элементов */
+}
+.cart1{
+	width:80%; 
+	height:100%; 
+	border: 0px solid;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 15% 5% 80%;
+	border-radius: 20px;
+	justify-items: center;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+/*    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);*/
+}
+.avatar_and_name{
+	width: 100%;
+	height: 100%;
+	border: 0px solid;
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: flex-end;
+	gap: 15px;
+}
+.profille_gallery{
+	width: 80%;
+	height: 100%;
+	border: 0px solid;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: start;
+	flex-wrap: wrap;
+}
+.photo_cart{
+	width:150px; 
+	height:150px; 
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('88888.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+/*.cart1:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart1:hover ~ *{
+	filter: blur(4px);
+}*/
+.photo_cart1{
+	width:150px; 
+	height:150px;
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('moon.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.cart2:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart2:hover ~ *{
+	filter: blur(4px);
+}
+.photo_cart2{
+	width:150px; 
+	height:150px;
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('5887446985475209149.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.cart3:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart3:hover ~ *{
+	filter: blur(4px);
+}
+.photo_cart3{
+	width:150px; 
+	height:150px;
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('cercov.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.cart4:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart4:hover ~ *{
+	filter: blur(4px);
+}
+.photo_cart4{
+	width:150px; 
+	height:150px;
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('nature_moon.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.cart5:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart5:hover ~ *{
+	filter: blur(4px);
+}
+.photo_cart5{
+	width:150px; 
+	height:150px;
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('dvor.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.cart6:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart6:hover ~ *{
+	filter: blur(4px);
+}
+.photo_cart6{
+	width:150px; 
+	height:150px;
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('moon2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.cart7:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart7:hover ~ *{
+	filter: blur(4px);
+}
+.photo_cart7{
+	width:150px; 
+	height:150px;
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('pexels-sergk1-14063875.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.cart8:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart8:hover ~ *{
+	filter: blur(4px);
+}
+.photo_cart8{
+	width:150px; 
+	height:150px;
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('5301006232414447303.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.cart9:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart9:hover ~ *{
+	filter: blur(4px);
+}
+.photo_cart9{
+	width:150px; 
+	height:150px;
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('pexels-vitaliy-bratkov-903020757-29398121.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.cart10:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart10:hover ~ *{
+	filter: blur(4px);
+}
+.photo_cart10{
+	width:150px; 
+	height:150px; 
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('5249494864272417820.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.cart11:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart11:hover ~ *{
+	filter: blur(4px);
+}
+.cart12{
+	width:100%; 
+	height:100%; 
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('5301006232414447303.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.cart12:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart12:hover ~ *{
+	filter: blur(4px);
+}
+.cart13{
+	width:100%; 
+	height:100%; 
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('5280476645221851612.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.cart13:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart13:hover ~ *{
+	filter: blur(4px);
+}
+.cart14{
+	width:100%; 
+	height:100%; 
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('5249494864272417826.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.cart14:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart14:hover ~ *{
+	filter: blur(4px);
+}
+.cart15{
+	width:100%; 
+	height:100%; 
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('5301006232414447305.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.cart15:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart15:hover ~ *{
+	filter: blur(4px);
+}
+.cart16{
+	width:100%; 
+	height:100%; 
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('5256169707306871666.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.cart16:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart16:hover ~ *{
+	filter: blur(4px);
+}
+.cart17{
+	width:100%; 
+	height:100%; 
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('5262533006298573407.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.cart17:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart17:hover ~ *{
+	filter: blur(4px);
+}
+.cart18{
+	width:100%; 
+	height:100%; 
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('5273799293926501655.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.cart18:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart18:hover ~ *{
+	filter: blur(4px);
+}
+.cart19{
+	width:100%; 
+	height:100%; 
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('5273799293926501662.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.cart19:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart19:hover ~ *{
+	filter: blur(4px);
+}
+.cart20{
+	width:100%; 
+	height:100%; 
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('5249494864272417825.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.cart20:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart20:hover ~ *{
+	filter: blur(4px);
+}
+.cart21{
+	width:100%; 
+	height:100%; 
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('5298945111968836943.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.cart21:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart21:hover ~ *{
+	filter: blur(4px);
+}
+.cart22{
+	width:100%; 
+	height:100%; 
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('5249494864272417821.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.cart22:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart22:hover ~ *{
+	filter: blur(4px);
+}
+.cart23{
+	width:100%; 
+	height:100%; 
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('5301006232414447367.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.cart23:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart23:hover ~ *{
+	filter: blur(4px);
+}
+.cart24{
+	width:100%; 
+	height:100%; 
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('5301006232414447365.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.cart24:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart24:hover ~ *{
+	filter: blur(4px);
+}
+.cart25{
+	width:100%; 
+	height:100%; 
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('5256169707306871665.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.cart25:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart25:hover ~ *{
+	filter: blur(4px);
+}
+.cart26{
+	width:100%; 
+	height:100%; 
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('5303279275136379970.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.cart26:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart26:hover ~ *{
+	filter: blur(4px);
+}
+.cart27{
+	width:100%; 
+	height:100%; 
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('5301006232414447306.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.cart27:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart27:hover ~ *{
+	filter: blur(4px);
+}
+.cart28{
+	width:100%; 
+	height:100%; 
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('5240189611467204900.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.cart28:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart28:hover ~ *{
+	filter: blur(4px);
+}
+.cart29{
+	width:100%; 
+	height:100%; 
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('5301006232414447308.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.cart29:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart29:hover ~ *{
+	filter: blur(4px);
+}
+.cart30{
+	width:100%; 
+	height:100%; 
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; 
+	overflow: hidden;
+	background: url('5301006232414447307.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.cart30:hover {
+	animation: ani_cart 0.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	z-index: 2;
+}
+.cart30:hover ~ *{
+	filter: blur(4px);
+}
+.text1{
+	font-size: 22px;
+	color: black;
+	font-family: 'URW Bookman L Bold', serif;
+  	margin-bottom: 12px;
+ }
+ .text_profille{
+ 	font-size: 20px;
+	color: black;
+	font-family: 'URW Bookman L Bold', serif;
+ }
+/*.cart1:hover .text1{
+	color:red;
+	opacity:1;
+	display: inline-flex;
+	animation-name: ani_txt;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}*/
+.circle{
+	width: 100px;
+	height: 100px;
+	border: 0px solid;
+	border-radius: 100px;
+	background: url('ava.jpg');
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-left: -10px;
+  	margin-top: -32px;
+}
+.field{
+	width: 100%;
+	height: 50px;
+	border: 0px solid;
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: center;
+	gap: 5px;
+	opacity: 0;
+}
+
+.cart1:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart2:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart3:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart4:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart5:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart6:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart7:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart8:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart9:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart10:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart11:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart12:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart13:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart14:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart15:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart16:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart17:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart18:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart19:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart20:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart21:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart22:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart23:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart24:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart25:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart26:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart27:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart28:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart29:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.cart30:hover .field{
+	animation-name: ani_txt;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+
+
+.txt_footer{
+	width: 100%;
+	height: 100%;
+	border: 0px solid;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.links{
+	width: 100%;
+	height: 100%;
+	border: 0px solid;
+	display: flex;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items: center;
+}
+.numbers{
+	width: 100%;
+	height: 100%;
+	border: 0px solid;
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: start;
+}
+
+.social{
+	width: 100%;
+	height: 100%;
+	border: 0px solid;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.picture{
+	width: 64px;
+	height: 64px;
+}
+.gif{
+	display: none;
+	width: 64px;
+	height: 64px;
+}
+.picturee-tree{
+	width: 64px;
+	height: 64px;
+}
+
+.picture:hover .gif{
+	display: block;
+
+}
+.picture:hover .picturee-tree{
+	display: none;
+
+}
+
+.groot{
+	display: none;
+	width: 64px;
+	height: 64px;
+}
+.groot_gif{
+	width: 64px 
+	height: 64px;
+}
+.groot1{
+	display: none;
+	width: 64px;
+	height: 64px;
+	transform: scaleX(-1);
+}
+.groot_gif1{
+	width: 64px 
+	height: 64px;
+	transform: scaleX(-1);
+}
+.title{
+	width:100%; 
+	height: 100px;
+	border: 0px solid; 
+	display: flex; 
+	flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+}
+
+.title:hover .groot_gif{
+	display: none;
+}
+.title:hover .groot{
+	display: block;
+}
+.title:hover .groot_gif1{
+	display: none;
+}
+.title:hover .groot1{
+	display: block;
+}
+@media (max-width: 1000px){
+
+	@keyframes ani_cart{
+	from{
+		transform: translate(0%,0%);
+	}
+	to{
+		transform: translate(0%,0%) scale(1.5);
+	}
+	}
+		.footer{
+		grid-template-columns: 1fr;
+	    grid-template-rows: 1fr 1fr 1fr;
+	    justify-content: center;
+	    justify-items: center;
+	    align-items: center;
+	}
+	.txt_footer{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.numbers{
+		flex-direction: column;
+  		justify-content: center;
+  		align-items: center;
+	}
+	.social{
+		flex-direction: row;
+  		justify-content: center;
+  		align-items: center;
+	}
+	.avatar_and_name{
+		align-items: start;
+	}
+	.cart1{
+		grid-template-rows: 10% 5% 85%;
+	}
+}
+@media (max-width: 800px){
+	@keyframes ani_cart{
+	from{
+		transform: translate(0%,0%);
+	}
+	to{
+		transform: translate(0%,0%) scale(1.3);
+	}
+	}
+	.buttons{
+		grid-template-columns: repeat(2, 2fr);
+	}
+
+	.header{
+		grid-template-columns: 0fr 2fr 0fr;
+	}
+	.footer{
+		grid-template-columns: 1fr;
+	    grid-template-rows: 1fr 1fr 1fr;
+	    justify-content: center;
+	    justify-items: center;
+	    align-items: center;
+	}
+	.txtFNumb{
+		font-size: 12px;
+	}
+	.txtFLinks{
+		font-size: 13px;
+	}
+	.titleF{
+		font-size: 25px;
+	}
+	.txt_footer{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.numbers{
+		flex-direction: column;
+  		justify-content: center;
+  		align-items: center;
+	}
+	.social{
+		flex-direction: row;
+  		justify-content: center;
+  		align-items: center;
+	}
+		.cart1{
+		grid-template-rows: 5% 5% 85%;
+	}
+}
+@media (max-width: 600px){
+
+	@keyframes ani_cart{
+	from{
+		transform: translate(0%,0%);
+	}
+	to{
+		transform: translate(0%,0%) scale(1.2);
+	}
+	}
+	.cart1{
+		grid-template-rows: 10% 5% 85%;
+	}
+	.photo_cart{
+		width: 120px;
+		height: 120px;
+	}
+	.photo_cart1{
+		width: 120px;
+		height: 120px;
+	}
+	.photo_cart2{
+		width: 120px;
+		height: 120px;
+	}
+	.photo_cart3{
+		width: 120px;
+		height: 120px;
+	}
+	.photo_cart4{
+		width: 120px;
+		height: 120px;
+	}
+	.photo_cart5{
+		width: 120px;
+		height: 120px;
+	}
+	.photo_cart6{
+		width: 120px;
+		height: 120px;
+	}
+	.photo_cart7{
+		width: 120px;
+		height: 120px;
+	}
+	.photo_cart8{
+		width: 120px;
+		height: 120px;
+	}
+	.photo_cart9{
+		width: 120px;
+		height: 120px;
+	}
+	.photo_cart10{
+		width: 120px;
+		height: 120px;
+	}
+	.footer{
+		grid-template-columns: 1fr;
+	    grid-template-rows: 1fr 1fr 1fr;
+	    justify-content: center;
+	    justify-items: center;
+	    align-items: center;
+	}
+	.txtFNumb{
+		font-size: 12px;
+	}
+	.txtFLinks{
+		font-size: 13px;
+	}
+	.titleF{
+		font-size: 25px;
+	}
+	.txt_footer{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.numbers{
+		flex-direction: column;
+  		justify-content: center;
+  		align-items: center;
+	}
+	.social{
+		flex-direction: row;
+  		justify-content: center;
+  		align-items: center;
+	}
+}
+@media (max-width: 500px) {
+    .buttons {
+        grid-template-columns: repeat(1, 2fr);
+    }
+    .cart1{
+		grid-template-rows: 10% 5% 85%;
+	}
+	.photo_cart{
+		width: 100px;
+		height: 100px;
+	}
+	.photo_cart1{
+		width: 100px;
+		height: 100px;
+	}
+	.photo_cart2{
+		width: 100px;
+		height: 100px;
+	}
+	.photo_cart3{
+		width: 100px;
+		height: 100px;
+	}
+	.photo_cart4{
+		width: 100px;
+		height: 100px;
+	}
+	.photo_cart5{
+		width: 100px;
+		height: 100px;
+	}
+	.photo_cart6{
+		width: 100px;
+		height: 100px;
+	}
+	.photo_cart7{
+		width: 100px;
+		height: 100px;
+	}
+	.photo_cart8{
+		width: 100px;
+		height: 100px;
+	}
+	.photo_cart9{
+		width: 100px;
+		height: 100px;
+	}
+	.photo_cart10{
+		width: 100px;
+		height: 100px;
+	}
+	@keyframes ani_cart{
+	from{
+		transform: translate(0%,0%);
+	}
+	to{
+		transform: translate(0%,0%) scale(1.1);
+	}
+	}
+	.field{
+	width: 100%;
+	height: 50px;
+	border: 0px solid;
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: center;
+	gap: 5px;
+	opacity: 1;
+	}
+}

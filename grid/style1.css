@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'URW Bookman L Bold'; /* Имя, которое вы будете использовать для шрифта */
+    src: url('fonts/URW Bookman L Bold.ttf') format('truetype'); /* Укажите путь к файлу шрифта */
+    font-weight: bold; /* Установите вес для шрифта */
+    font-style: normal; /* Установите стиль для шрифта */
+}
+
+.grid{
+	width: 100%;
+	height: 100%;
+	border: 0px solid;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 20% 60% 20%;
+	justify-content: center;
+/*	justify-content: center;
+	justify-items: center;
+	align-items:center;*/
+}
+.heads{
+	width: 100%;
+	height: 100px;
+	border: 0px solid;
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: 100%;
+	background-color: #002f05;
+	border-bottom: 5px #001c03 solid;
+}
+
+.main_name{
+	font-family: 'URW Bookman L Bold', serif; 
+    font-weight: bold;
+    font-size: 38px;
+}
+
+.bodys{
+	width: 100%;
+	height: 100%;
+	border: 0px solid;
+	display: grid;
+	grid-template-columns: 10% 45% 45%;
+	grid-template-rows: auto auto auto;
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+
+}
+
+.left_stick{
+	width: 100%;
+	height: 100%; 
+	border:0px solid; 
+	background-color: #2e1700;
+	display: grid;
+	grid-template-rows: 100%;
+	grid-template-columns: 100%;
+}
+
+.inner_bor{
+/*	width: 100%;*/
+	height: 100%;
+	border-right: 5px #241200 solid;
+	padding-right: 25px;
+}
+
+.body_info{
+	width: 100%;
+	height: 100%; 
+	border:0px solid;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: auto auto auto auto;
+	justify-content: center;
+	justify-items: center;
+	align-items: start;
+	background-color: #824c16;
+
+}
+
+.about_us{
+	font-family: 'URW Bookman L Bold', serif; 
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.photo{
+	width: 100%;
+	height: 100%;
+	border: 0px solid;
+/*	border-bottom: 5px #001c03 solid;*/
+/*	border-top: 2px #001c03 solid;*/
+/*	border-right: 7px #002f05 solid;*/
+	display: grid;
+	grid-template-rows: 100%;
+	grid-template-columns: 100%;
+	justify-content: center;
+	justify-items: end;
+	align-items: start;
+	border-bottom: 5px #6e3c0b solid;
+/*	border-left: 5px #6e3c0b solid;*/
+}
+
+
+.photo img.photo_img2{
+	opacity: 0;
+}
+
+.photo:hover img.photo_img{
+	opacity: 0;
+}
+
+.photo:hover img.photo_img2{
+	opacity: 1;
+}
+
+.photo1{
+	width: 100%;
+	height: 100%;
+	border: 0px solid;
+	border-top: 5px #6e3c0b solid;
+
+/*	border-bottom: 5px #001c03 solid;*/
+/*	border-top: 2px #001c03 solid;*/
+/*	border-right: 7px #002f05 solid;*/
+/*	display: grid;
+	grid-template-rows: 100%;
+	grid-template-columns: 100%;
+	justify-content: center;
+	justify-items: end;
+	align-items: start;*/
+}
+.block_txt{
+	width: 100%;
+	height: 100%;
+	border: 0px solid;
+	display: grid;
+	grid-template-rows: 100%;
+	grid-template-columns: 100%;
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.inner_bor1{
+/*	width: 100%;*/
+	height: 50%;
+	border-right: 5px #6e3c0b solid;
+	padding-right: 25px;
+}
+
+.title{
+	width: 100%;
+	height: 50%;
+	border: 0px solid;
+
+}
+
+.desc{
+	width: 100%;
+	height: 100%;
+	border: 0px solid;
+}
+
+.desc2{
+	width: 100%;
+	height: 55%;
+	border: 0px solid;
+/*	border-top: 5px #6e3c0b solid;*/
+/*	border-left: 5px #6e3c0b solid;*/
+}
+
+.inner_bor2{
+/*	width: 100%;*/
+	height: 100%;
+	border-left: 5px #6e3c0b solid;
+	padding-left: 25px;
+}
+
+.main_desc2{
+	width: 100%;
+	height: 100%;
+	border: 0px solid;
+	display: grid;
+	grid-template-rows: 100%;
+	grid-template-columns: 100%;
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+}
+
+.main_desc3{
+	width: 100%;
+	height: 100%;
+	border: 0px solid;
+	display: grid;
+	grid-template-rows: 100%;
+	grid-template-columns: 100%;
+	justify-content: center;
+	justify-items: center;
+	align-items: start;
+/*	border-top: 5px #6e3c0b solid;*/
+/*	border-right: 5px #6e3c0b solid;*/
+}
+
+.desc3{
+	width: 100%;
+	height: 55%;
+	border: 0px solid;
+/*	border-top: 5px #6e3c0b solid;*/	
+}
+
+.inner_bor3{
+/*	width: 100%;*/
+	height: 150%;
+	border-right: 5px #6e3c0b solid;
+	padding-right: 25px;
+}
+
+.photo2{
+	width: 100%;
+	height: 100%;
+	border: 0px solid;
+/*	border-top: 5px #6e3c0b solid;*/
+
